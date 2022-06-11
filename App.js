@@ -4,10 +4,10 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-let {spiritName, herbName} = require( './routes/inventory');
+let spiritName = require( './routes/inventory');
 
 app.get('/', (req, res) => {
-  res.send(`Hello World! The spirit chosen is ${spiritName}. Add some ${herbName} to it!` )
+  res.send(`Hello World! The spirit chosen is ${spiritName}. Add some [incoming herb name] to it!` )
 })
 
 app.listen(port, () => {

@@ -14,9 +14,11 @@ function ingredientsPrint() {
     }
     
     //let randomIndex be the variable for the result of math.random
-    let randomIndex = generateRandomInteger(spirits.length, herbs.length);
-    return spirits[randomIndex], herbs[randomIndex];
+    let randomSpiritIndex = generateRandomInteger(spirits.length, herbs.length);
+    // let randomHerbIndex = generateRandomInteger(herbs.length);
+    return spirits[randomSpiritIndex]; 
+    
 };
 
 
-module.exports = ingredientsPrint(spirits, herbs);
+module.exports = ingredientsPrint(spirits);
