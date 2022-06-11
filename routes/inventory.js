@@ -4,8 +4,9 @@
 //should i group functions as a class to export all together?
 
 const spirits = ['vodka', 'gin', 'rum', 'tequila', 'whiskey'];
+const herbs = ['campari', 'suze', 'amaro nonino', 'brancamenta', 'averna', 'ancho reyes', 'creme de menthe', 'benedictine', 'ramazzotti', 'underberg', 'strega'];
 
-function spiritsPrint() {
+function ingredientsPrint() {
     //From Udacity blog
     // Generate a number between 0 and 4, including 4
     function generateRandomInteger(max) {
@@ -13,9 +14,9 @@ function spiritsPrint() {
     }
     
     //let randomIndex be the variable for the result of math.random
-    let randomIndex = generateRandomInteger(4);
-    return spirits[randomIndex];
+    let randomIndex = generateRandomInteger(spirits.length, herbs.length);
+    return spirits[randomIndex], herbs[randomIndex];
 };
 
 
-module.exports = spiritsPrint(spirits);
+module.exports = ingredientsPrint(spirits, herbs);
